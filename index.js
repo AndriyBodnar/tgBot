@@ -48,7 +48,7 @@ const start = async () => {
         return infoFunc(chatId);
       }
       if (text === "/nastia") {
-        await bot.sendAudio(chatId, "nastiaOpinion.ogg");
+        await bot.sendAudio(chatId, "audio/nastiaOpinion.ogg");
         return nastiaFunc(chatId);
       }
       if (text === "/test") {
@@ -83,14 +83,14 @@ const start = async () => {
         chatId,
         `Станом на 5 листопада в Україні від коронавірусу зробили 18 848 929 щеплень (+270 320 за попередню добу)`
       );
-      await bot.sendAudio(chatId, `true.ogg`);
+      await bot.sendAudio(chatId, `audio/true.ogg`);
       await bot.sendMessage(
         chatId,
         `Another commands:`,
         anotherCommandsOptions
       );
     } else if (data == "no") {
-      await assetsFunc(`hoi_opinion.ogg`, false);
+      await assetsFunc(`audio/hoi_opinion.ogg`, false);
       await assetsFunc(`Sign up for vaccination:`, true, linkOptions);
       return await bot.sendMessage(
         chatId,
@@ -98,9 +98,9 @@ const start = async () => {
         anotherCommandsOptions
       );
     } else if (data == "pr") {
-      await assetsFunc(`nastiaAboutPr.ogg`, false, nastia1Options);
+      await assetsFunc(`audio/nastiaAboutPr.ogg`, false, nastia1Options);
     } else if (data == "d") {
-      await assetsFunc(`nastiaAboutD.ogg`, false, nastia2Options);
+      await assetsFunc(`audio/nastiaAboutD.ogg`, false, nastia2Options);
     } else {
     }
   });
